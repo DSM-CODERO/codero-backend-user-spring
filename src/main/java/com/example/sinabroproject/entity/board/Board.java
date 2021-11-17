@@ -19,21 +19,22 @@ public class Board {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "post_id")
-    private Long id;
+    @Column(unique = true)
+    private int  board_id;
 
-    private String createAT;
+    private String create_at;
 
-    private String content;
+    private String context;
 
+    @Column(length = 30)
     private String title;
-
-    private String nickname;
+    
+    private int user_id;
 
     private String picture;
 
+    @Column(length = 10)
     private String filed;
 
-    @NotNull
-    private int like;
+
 }
