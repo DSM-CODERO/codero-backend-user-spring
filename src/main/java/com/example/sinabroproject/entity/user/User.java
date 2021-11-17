@@ -17,12 +17,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(unique = true)
+    @Column(unique = true, length = 20)
     private String password;
 
-    @Column(unique = true)
+    @Column(unique = true, length = 10)
     private String nickname;
 
-    @Column(unique = true)
+    @Column(unique = true, length = 45)
     private String email;
 }
