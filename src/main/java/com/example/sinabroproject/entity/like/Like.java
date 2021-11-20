@@ -16,7 +16,7 @@ public class Like {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int user_id;
 
-    private String board_number;
+    private int board_id;
 }
