@@ -3,8 +3,9 @@ package com.example.sinabroproject.entity.comments;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.persistence.Table;
 
 @Entity
@@ -12,19 +13,20 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Table(name = "comments")
 public class Comments {
+    private int id;
 
     @Id
-    private Long id;
-
     private int board_number;
 
-    private String nickname;
+    private int board_id;
 
-    private String content;
+    private int user_id;
 
-    private String createAT;
+    private String context;
 
-    private int parent_number;
+    private int created_at;
+
+    private int reply_comment_id;
 
     private String picture;
 }
