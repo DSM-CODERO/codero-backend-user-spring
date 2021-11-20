@@ -20,7 +20,7 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
-    private int  board_id;
+    private int id;
 
     private String create_at;
 
@@ -28,7 +28,7 @@ public class Board {
 
     @Column(length = 30)
     private String title;
-    
+
     private int user_id;
 
     private String picture;
