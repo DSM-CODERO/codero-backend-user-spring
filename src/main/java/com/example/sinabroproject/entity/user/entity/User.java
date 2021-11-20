@@ -1,4 +1,4 @@
-package com.example.sinabroproject.entity.user;
+package com.example.sinabroproject.entity.user.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,12 +17,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(unique = true, length = 20)
+    @Column(unique = true, length = 60)
     private String password;
 
     @Column(unique = true, length = 10)
     private String nickname;
 
-    @Column(unique = true, length = 45)
+    @Column(unique = true, length = 36)
     private String email;
 }
