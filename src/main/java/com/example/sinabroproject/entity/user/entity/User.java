@@ -4,6 +4,7 @@ package com.example.sinabroproject.entity.user.entity;
 
 import com.example.sinabroproject.entity.role.Role;
 import com.example.sinabroproject.entity.user.ERole;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -21,16 +22,16 @@ public class User {
     private Long id;
 
     @NotBlank
-    @Size(max = 20)
+    @Column(length = 10)
     private String username;
 
     @NotBlank
-    @Size(max = 50)
+    @Column(length = 36)
     @Email
     private String email;
 
     @NotBlank
-    @Size(max = 120)
+    @Column(length = 60)
     private String password;
 
     @Enumerated(EnumType.STRING)
