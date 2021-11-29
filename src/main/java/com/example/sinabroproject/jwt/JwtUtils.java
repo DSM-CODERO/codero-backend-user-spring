@@ -1,6 +1,7 @@
 package com.example.sinabroproject.jwt;
 
 
+import com.example.sinabroproject.service.user.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,7 @@ public class JwtUtils {
     private long tokenValidTime;
 
     public String generateJwtToken(UserDetailsImpl userPrincipal) {
-        return generateTokenFromUsername(userPrincipal.getUsername());
+        return generateTokenFromUsername(userPrincipal.getEmail());
     }
 
     public String generateTokenFromUsername(String username) {
