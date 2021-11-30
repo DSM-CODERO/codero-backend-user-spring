@@ -18,6 +18,5 @@ public class Like {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int user_id;
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int board_id;
 }
