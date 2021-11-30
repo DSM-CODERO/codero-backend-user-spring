@@ -1,6 +1,6 @@
 package com.example.sinabroproject.entity.refresh;
 
-import com.example.sinabroproject.entity.user.entity.User;
+import com.example.sinabroproject.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
