@@ -1,4 +1,4 @@
-package com.example.sinabroproject.controller;
+package com.example.sinabroproject.controller.auth;
 
 
 import com.example.sinabroproject.entity.refresh.RefreshToken;
