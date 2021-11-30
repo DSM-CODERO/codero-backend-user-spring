@@ -1,6 +1,6 @@
 package com.example.sinabroproject.entity.refresh;
 
-import com.example.sinabroproject.entity.user.entity.User;
+import com.example.sinabroproject.entity.user.User;
 
 import javax.persistence.*;
 import java.time.Instant;
