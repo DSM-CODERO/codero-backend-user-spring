@@ -1,7 +1,7 @@
 package com.example.sinabroproject.service.user;
 
-import com.example.sinabroproject.entity.user.entity.User;
-import com.example.sinabroproject.entity.user.entity.UserRepository;
+import com.example.sinabroproject.entity.user.User;
+import com.example.sinabroproject.entity.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
