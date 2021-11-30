@@ -2,7 +2,7 @@ package com.example.sinabroproject.service.refreshtoken;
 
 import com.example.sinabroproject.entity.refresh.RefreshToken;
 import com.example.sinabroproject.entity.refresh.RefreshTokenRepository;
-import com.example.sinabroproject.entity.user.entity.UserRepository;
+import com.example.sinabroproject.entity.user.UserRepository;
 import com.example.sinabroproject.exception.TokenRefreshException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
