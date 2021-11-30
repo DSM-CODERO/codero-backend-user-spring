@@ -1,7 +1,7 @@
 package com.example.sinabroproject.service.user;
 
 
-import com.example.sinabroproject.entity.user.entity.User;
+import com.example.sinabroproject.entity.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
