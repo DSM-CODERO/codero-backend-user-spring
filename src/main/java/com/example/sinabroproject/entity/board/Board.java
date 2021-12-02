@@ -1,5 +1,6 @@
 package com.example.sinabroproject.entity.board;
 
+import com.example.sinabroproject.entity.user.User;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 
 @Entity
@@ -19,22 +21,26 @@ public class Board {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true)
-    private int id;
+    @Column(name = "board_id", unique = true)
+    private Integer board_id;
 
-    private String create_at;
+    private Instant create_at;
 
     private String context;
 
     @Column(length = 30)
     private String title;
 
-    private int user_id;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     private String picture;
 
     @Column(length = 10)
     private String filed;
 
+    private boolean isdeleted;
 
+    private Instant updated_at;
 }
