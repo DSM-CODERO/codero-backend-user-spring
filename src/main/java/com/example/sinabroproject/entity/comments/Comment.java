@@ -14,18 +14,18 @@ import java.time.Instant;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "comments")
-public class Comments {
+@Table(name = "comment")
+public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    @ManyToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "board_id")
     private Board board;
 
-    @ManyToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -33,7 +33,7 @@ public class Comments {
 
     private Instant created_at;
 
-    private int reply_comment_id;
+    private Integer reply_comment_id;
 
     private String picture;
 
