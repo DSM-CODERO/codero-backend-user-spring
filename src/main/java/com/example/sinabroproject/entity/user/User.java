@@ -1,35 +1,38 @@
 package com.example.sinabroproject.entity.user;
 
 
-
 import com.example.sinabroproject.entity.role.Role;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import java.util.HashSet;
-import java.util.Set;
-
+import javax.validation.constraints.Size;
 
 @Entity
-@Table
+@Table(	name = "user",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "username"),
+                @UniqueConstraint(columnNames = "email")
+        })
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
     private Long id;
 
     @NotBlank
-    @Column(length = 10)
+    @Size(max = 20)
     private String username;
 
     @NotBlank
-    @Column(length = 36)
+    @Size(max = 50)
     @Email
     private String email;
 
     @NotBlank
-    @Column(length = 60)
+    @Size(max = 120)
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -37,8 +40,8 @@ public class User {
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
-            joinColumns = @JoinColumn(name = "users_id"),
-            inverseJoinColumns = @JoinColumn(name = "roles_id"))
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
     public User() {
