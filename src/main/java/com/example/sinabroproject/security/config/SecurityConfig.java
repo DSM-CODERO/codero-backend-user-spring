@@ -20,7 +20,6 @@ import org.springframework.stereotype.Component;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserDetailsServiceImpl userDetailsService;
 
