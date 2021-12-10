@@ -7,7 +7,7 @@ public class JwtResponse {
     private String type = "Bearer";
     private String refreshToken;
     private Long id;
-    private String nickname;
+    private String username;
     private String email;
     private List<String> roles;
 
@@ -15,7 +15,7 @@ public class JwtResponse {
         this.token = accessToken;
         this.refreshToken = refreshToken;
         this.id = id;
-        this.nickname = nickname;
+        this.username = username;
         this.email = email;
         this.roles = roles;
     }
