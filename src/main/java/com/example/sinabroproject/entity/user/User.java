@@ -9,26 +9,21 @@ import java.util.Set;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+
 
 @Entity
-@Table(	name = "user",
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = "username"),
-                @UniqueConstraint(columnNames = "email")
-        })
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(table = "user_id")
+    @Column(name = "user_id")
     private Long id;
 
     @NotBlank
-    @Column(length = 10)
+    @Column(length = 10, unique = true)
     private String username;
 
     @NotBlank
-    @Column(length = 36)
+    @Column(length = 36, unique = true)
     @Email
     private String email;
 
